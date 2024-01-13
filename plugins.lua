@@ -38,6 +38,15 @@ local plugins = {
         config = function(_, opts)
             require("rust-tools").setup(opts)
         end
+    },
+    {
+        "ThePrimeagen/harpoon",
+        branch = "harpoon2",
+        dependencies = { "nvim-lua/plenary.nvim" },
+        lazy = false,
+        config = function()
+            require("custom.configs.harpoon")
+        end
     }
 }
 return plugins
